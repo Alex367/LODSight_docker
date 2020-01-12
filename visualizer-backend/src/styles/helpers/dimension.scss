@@ -1,0 +1,38 @@
+.width-100{
+  width: 100%;
+}
+
+.width-50{
+  width: 50%;
+}
+
+.width-auto{
+  width: auto;
+}
+
+.height-100{
+  height: 100%;
+}
+
+.height-50{
+  height: 50%;
+}
+
+.height-auto{
+  height: auto;
+}
+
+
+.height-100-sm {
+  height: auto;
+  @media #{$sm}{
+    height: 100% !important;
+  }
+}
+
+.height-100-md {
+  height: auto;
+  @media #{$md}{
+    height: 100% !important;
+  }
+}

@@ -1,0 +1,3 @@
+* * * * * php /var/www/html/lodsum.php status
+* * * * * /bin/bash /var/www/html/lodshell.sh
+* * * * * php /var/www/html/lodstat.php sum

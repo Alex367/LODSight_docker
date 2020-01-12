@@ -1,0 +1,11 @@
+::selection {
+  text-shadow: none;
+  background-color: $themeColor;
+  color: $themeWhite;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background-color: $themeColor;
+  color: $themeWhite;
+}

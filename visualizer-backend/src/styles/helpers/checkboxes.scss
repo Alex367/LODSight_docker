@@ -1,0 +1,23 @@
+.abc-checkbox {
+  label {
+    padding-left: 15px;
+  }
+}
+
+.checkbox {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.abc-checkbox-primary input[type="checkbox"]:checked + label::before,
+.abc-checkbox-primary input[type="radio"]:checked + label::before {
+  background-color: $themeColor;
+  border-color: $themeColor;
+}
+
+input[type="checkbox"].styled:checked + label:after,
+input[type="radio"].styled:checked + label:after,
+.checkbox input[type=checkbox]:checked + label:after {
+  font-family: 'Glyphicons Halflings';
+  content: "\e013";
+}

@@ -1,0 +1,32 @@
+version: '3'
+
+
+services:
+
+  lodsight-visualizer:
+    build: visualizer-backend/
+    container_name: lodsight-visualizer
+    ports:
+      - 8090:80
+
+  lodsight-summarizer:
+    build: summarizer-backend/
+    container_name: lodsight-summarizer
+    ports:
+      - 8080:80
+
+  lodsight-db:
+    image: mysql:5.6
+    container_name: lodsight-db
+    volumes:
+      - ./lodsight-db/db-init-sum.sql:/docker-entrypoint-initdb.d/10-db-init.sql:ro
+      - ./lodsight-db/db-init-viz.sql:/docker-entrypoint-initdb.d/20-db-init.sql:ro
+    environment:
+      - MYSQL_ROOT_PASSWORD=test123123
+      - MYSQL_USER=lodsight
+      - MYSQL_PASSWORD=loddva
+      - MYSQL_DATABASE=lodsight2
+    ports:
+      - 3306:3306
+    restart: always
+

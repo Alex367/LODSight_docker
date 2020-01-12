@@ -1,0 +1,16 @@
+.input-range__slider{
+  background-color: $themeComplementary;
+  border-color: $themeComplementary;
+  width: 2rem;
+  height: 2rem;
+  margin-left: -1rem;
+  margin-top: -1.25rem;
+}
+
+.input-range__track{
+  height: .5rem;
+}
+
+.input-range__track--active{
+  background-color: $themeComplementary;
+}

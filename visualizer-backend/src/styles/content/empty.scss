@@ -1,0 +1,27 @@
+.empty{
+  position: absolute;
+  top: 45%;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  h3{
+    margin-bottom: 20px;
+  }
+  button{
+    height: 40px;
+    border-radius: 20px;
+    margin: 0 5px;
+    color: $themeWhite;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: $themeColor;
+    &:hover{
+      background-color: $themeColorHover;
+      color: $themeWhite;
+    }
+  }
+  ul{
+    padding-left: 0;
+    list-style: none;
+  }
+}

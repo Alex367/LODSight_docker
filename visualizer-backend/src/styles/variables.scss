@@ -1,0 +1,205 @@
+$dark-hover: #2D2D2D;
+$light-hover: #EEE;
+
+$themeColor: #005e81;
+$themeWhite: #FFF;
+$themeBlack: #1A1A1A;
+$themeLightGray: #FAFAFA;
+$themeDarkGray: #666;
+
+$themeColorHover: #0e5068;
+$themeComplementary: #ebd10e;
+
+$device: "only screen and (max-device-width : 480px)";
+$landscape: "screen and (orientation:landscape) and (max-device-width : 768px)";
+$xxs: "(max-width : 320px)";
+$xs: "(max-width : 768px)";
+$sm: "(min-width : 768px)";
+$md: "(min-width: 992px)";
+$lg: "(min-width: 1200px)";
+$xlg: "(min-width: 1600px)";
+
+@mixin dark-opacity($opacity: 0.3) {
+  background: $dark-hover;
+  background: rgba($dark-hover, $opacity);
+}
+
+@mixin light-opacity($opacity: 0.3) {
+  background: $light-hover;
+  background: rgba($light-hover, $opacity);
+}
+
+@mixin brightness($color, $opacity: 0.3) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+@mixin hoverTransition($duration : 0.35s) {
+  -webkit-transition: all $duration;
+  -moz-transition: all $duration;
+  transition: all $duration;
+}
+
+@mixin gradient($first, $second) {
+  background: $first; /* Old browsers */
+  background: -moz-linear-gradient(top, $first 0%, $second 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $first 0%, $second 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $first 0%, $second 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$first, endColorstr=$second, GradientType=0); /* IE6-9 */
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin transitionDelay($args...) {
+  -webkit-transition-delay: $args;
+  -moz-transition-delay: $args;
+  -ms-transition-delay: $args;
+  -o-transition-delay: $args;
+  transition-delay: $args;
+}
+
+@mixin boxShadow($args...) {
+  -webkit-box-shadow: $args;
+  box-shadow: $args;
+}
+
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+@mixin animation($args...) {
+  -webkit-animation: $args;
+  -moz-animation: $args;
+  -o-animation: $args;
+  animation: $args;
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
+}
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+  -moz-align-self: $align;
+  -ms-align-self: $align;
+  align-self: $align;
+}
+
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  align-items: $align;
+}
+
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+  -moz-align-content: $align;
+  -ms-align-content: $align;
+  align-content: $align;
+}
+
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+  -moz-flex-basis: $width;
+  -ms-flex-basis: $width;
+  flex-basis: $width;
+}
+
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+  -ms-flex-pack: $justify;
+}
+
+@mixin flex-shrink($shrink) {
+  -webkit-flex-shrink: $shrink;
+  -moz-flex-shrink: $shrink;
+  -ms-flex-shrink: $shrink;
+  flex-shrink: $shrink;
+}
+
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+  -moz-flex-grow: $grow;
+  -ms-flex-grow: $grow;
+  flex-grow: $grow;
+}
+
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+  -moz-flex-flow: $flow;
+  -ms-flex-flow: $flow;
+  flex-flow: $flow;
+}
+
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin overflow-x($arg) {
+  overflow-x: $arg;
+  -ms-overflow-x: $arg;
+}
+
+@mixin overflow-y($arg) {
+  overflow-y: $arg;
+  -ms-overflow-y: $arg;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+

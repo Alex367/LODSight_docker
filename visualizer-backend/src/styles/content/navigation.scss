@@ -1,0 +1,59 @@
+.navbar-default {
+  border-radius: 0;
+  border: none;
+  color: $themeWhite;
+  background-color: $themeColor;
+  font-family: "Segoe UI Light";
+  .navbar-toggle{
+    border: 0;
+    &:hover, &:focus{
+      background-color: $themeColor;
+    }
+    .icon-bar {
+      background-color: $themeWhite;
+    }
+  }
+  .navbar-nav {
+    > li {
+      text-align: center;
+      > a {
+        color: $themeWhite;
+        font-size: 1.3em;
+        @include hoverTransition();
+        &:hover, &:focus, &:active {
+          @include dark-opacity();
+          @include hoverTransition();
+          color: $themeWhite;
+        }
+      }
+    }
+  }
+
+  .navbar-header{
+    max-width: 65%;
+  }
+
+  span {
+    &.page-name {
+      width: 60%;
+      padding-left: 10px;
+      @media #{$sm} {
+        width: 100%;
+        padding-left: 0;
+      }
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+      float: left;
+      color: $themeWhite;
+      font-size: 1.2em;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+
+}
+.navbar-fixed-top{
+   z-index: 999;
+ }

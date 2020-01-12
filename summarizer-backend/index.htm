@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="cs">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/jquery-ui.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+
+        <title>LOD Summarizer</title>
+    </head>
+    <body>
+        <div class="cover">
+            <div class="loader"></div>
+        </div>
+        <div id="dialog-confirm" title="Prázdný e-mail" style="display: none;">
+          <p>Opravdu si nepřejete aby Vám byl po dokončení vašeho požadavku zaslán e-mail?</p>
+        </div>
+        <div class="container">
+            <div class="pl-3 pt-4 pb-4 navblue">
+                <h1>LOD Summarizer</h1>
+                <ul>
+                    <li>vkládejte URI endpointu a datasetu do textového pole v podobě "endpoint;dataset"</li>
+                    <li>využijte možnosti vložení i několika dvojic</li> 
+                    <li>každou dvojici zapisujte na nový řádek</li>
+                    <li>povinná pole jsou označena *</li>
+                    <li>volitelná pole jsou označena **</li>
+                </ul>
+            </div>
+            <form id="reqForm" class="pt-5 pr-3 pb-2 pl-3">
+                <div id="hlaska" class="alert" role="alert" style="margin-top: -30px;display:none;color:#333;"></div>
+                <input type="hidden" id="akce" name="akce" value="start" />
+                <div class="form-group row">
+                    <label for="email" class="col-3 col-form-label">Váš e-mail <span style="color:#007bff">**</span></label>
+                    <div class="col-9">
+                        <input type="email" class="myinput form-control" id="email" name="email" placeholder="example@domain.com" value="" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="endpoints" class="col-3 col-form-label">Dvojice URL <i>"endpoint;dataset"</i> <span style="color:#007bff">*</span></label>
+                    <div class="col-9">
+                        <textarea class="myinput form-control" id="endpoints" name="endpoints" placeholder="http://example.com/sparql;http://dataset"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12 text-center">
+                        <button class="btn btn-primary col-2" id="sendReq">Odeslat</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <script src="./js/autosize.js"></script>
+    <script src="./js/script.js"></script>
+    </body>
+</html>

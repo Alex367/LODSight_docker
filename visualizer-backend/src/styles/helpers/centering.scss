@@ -1,0 +1,72 @@
+
+.centerizeH, .centerizeV, .centerizeV-sm, .centerizeVH, .centerizeVH-sm, .centerizeVH-md {
+  position: relative;
+}
+
+.centerizeVH {
+  height: 100%;
+  width: 100%;
+}
+
+.centerizeH > :first-child {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+}
+
+.centerizeV > :first-child {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.centerizeV-sm > :first-child {
+  position: relative;
+  top: auto;
+  transform: translate(0, 0);
+  @media #{$sm}{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+.centerizeVH-sm > :first-child {
+  position: relative;
+  top: auto;
+  left: auto;
+  margin-right: auto;
+  transform: translate(0, 0);
+  @media #{$sm}{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.centerizeVH-md > :first-child {
+  position: relative;
+  top: auto;
+  left: auto;
+  margin-right: auto;
+  transform: translate(0, 0);
+  @media #{$md}{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.centerizeVH > :first-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}

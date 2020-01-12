@@ -1,0 +1,52 @@
+.animated {
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Segoe UI Semilight", "Segoe UI Light", Calibri, sans-serif;
+  color: $themeBlack;
+  background-color: $themeWhite;
+  min-width: 320px;
+  @media #{$xxs}{
+    overflow-x: scroll;
+  }
+}
+
+div > :not(p):not(span):not(i), *:hover {
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  transition: all .2s;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+button {
+  -webkit-appearance: none !important;
+  &:focus {
+    outline: none !important;
+  }
+  &:active {
+    box-shadow: none !important;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.block {
+  display: block;
+}
+
+.toaster-container{
+  z-index: 999999999 !important;
+}
+
+
+
