@@ -60,7 +60,7 @@
     "detect-browser": "^1.12.0",
     "es6-promise": "^4.2.5",
     "isomorphic-fetch": "^2.2.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "prop-types": "^15.6.2",
     "query-string": "^6.2.0",
     "react": "^16.6.0",
